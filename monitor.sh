@@ -26,3 +26,5 @@ aws lambda list-functions
 echo "list of IAM users"
 aws iam list-users
 
+
+##This will list all the details like s3,ec2,lambda,iam of aws##
