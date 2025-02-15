@@ -1,0 +1,16 @@
+#!/bin/bash
+
+line=$(cat file.txt | wc -l)
+
+if [ $line -ge 10 ]; then
+    echo "This is the 10th line"
+    awk 'NR==10' file.txt
+else
+    echo "This has only $line"
+fi
+
+##############
+
+#file.txt has any 10 lines. 
+#if it has more than 10 lines then 10th line will be printed.
+#if not then it will print current lines

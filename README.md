@@ -19,3 +19,9 @@ we have used grep command, along with -e to include multiple regex
 ^ is start of string. $ indicates end of the string.
 
 \ to supress the specialness of the character.
+
+# To Print the 10 lines
+
+To print the 10th lines, we can use awk command. 
+
+we need to provide the file.txt as input, and it will print 10th line
