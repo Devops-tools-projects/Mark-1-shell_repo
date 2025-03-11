@@ -25,3 +25,29 @@ we have used grep command, along with -e to include multiple regex
 To print the 10th lines, we can use awk command. 
 
 we need to provide the file.txt as input, and it will print 10th line
+
+# Network monitor
+
+To monitor and check the network connection, we can observe the connections like internet connection, DNS resolution, latency ,and internet speed
+
+For internet connection we are using commands like ping
+~~~
+ping -c 4 <TARGET_IP>
+~~~
+
+For DNS resolution we are using nslookup
+~~~
+nslookup <TARGET_DOMAIN>
+~~~
+
+For Latency we can using ping as well
+~~~
+ping -c 4 <LATENCY_TARGET> | tail -n 1 | awk -F '/' '{print $5}'
+~~~
+
+For internet speed we are using program like speedtest
+~~~
+speedtest-cli --simple
+~~~
+
+The output is forwarded to the network_troubleshoot.log file
