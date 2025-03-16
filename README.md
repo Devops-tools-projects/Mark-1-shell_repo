@@ -51,3 +51,10 @@ speedtest-cli --simple
 ~~~
 
 The output is forwarded to the network_troubleshoot.log file
+
+## dashed file (-)
+
+A file name is of - then we cant view or open the file, we need to use fqdn for opening files like that
+~~~
+cat ./-
+~~~
