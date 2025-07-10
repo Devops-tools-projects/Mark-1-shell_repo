@@ -1,4 +1,10 @@
-# My first project
+# Linux 
+
+Booting process in Linux systems.
+
+### BIOS -->  BootLoader -->  Kernal Initialization --> init System --> Runlevel/Target --> Login Prompt 
+
+## My first project
 AWS monitoring code using shell scripting
 
 we are first going to connect to the aws from our console using
@@ -8,7 +14,7 @@ Post providing the "access key" and "password". we will execute the scrips used 
 
 we can add this script to cron to get details daily.
 
-# Sort script
+## Sort script
 
 To sort the proper phone number from teh file.txt in single line command
 
@@ -20,13 +26,13 @@ we have used grep command, along with -e to include multiple regex
 
 \ to supress the specialness of the character.
 
-# To Print the 10 lines
+## To Print the 10 lines
 
 To print the 10th lines, we can use awk command. 
 
 we need to provide the file.txt as input, and it will print 10th line
 
-# Network monitor
+## Network monitor
 
 To monitor and check the network connection, we can observe the connections like internet connection, DNS resolution, latency ,and internet speed
 
