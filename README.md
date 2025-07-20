@@ -22,6 +22,20 @@ top # we can use C to sort them with high cpu
 systemctl list-units
 ~~~
 
+
+## Systemd config changes
+Service configurations are stored in "/usr/lib..." path. but Changes to the files inside this path is forbidden so to perform any config chages we need to do them in "/etc/systemd/system/<unit>.d" .
+
+we can create a directory with the units name along with ".d" , so the configuration is going to be applicable there.
+
+- **if we want to perform the changes to the ssnd.service units description value**
+~~~
+cat /usr/lib/systemd/sshd.service              #check the original path "/usr/lib/systemd/sshd.service" to see which value that you want to change.
+mkdir /etc/systemd/system/sshd.service.d       #now we can create a new file in etcd and edit that value.
+vim 00-description.conf                        # 00 will make this file execte first and the value we are changing is description of the file.
+systemctl daemon-reload                        # This will be used to reload the systemctl and update changes.
+~~~
+
 ## My first project
 AWS monitoring code using shell scripting
 
