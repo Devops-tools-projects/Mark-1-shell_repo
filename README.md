@@ -16,7 +16,12 @@ mkdir -pv foo/bar/baz
 top # we can use M to sort them with high memory
 top # we can use C to sort them with high cpu
 ~~~
-  
+
+- **To see the systemd units**
+~~~
+systemctl list-units
+~~~
+
 ## My first project
 AWS monitoring code using shell scripting
 
