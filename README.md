@@ -4,6 +4,19 @@ Booting process in Linux systems.
 
 ### BIOS -->  BootLoader -->  Kernal Initialization --> init System --> Runlevel/Target --> Login Prompt 
 
+## Linux Commands
+
+- **Command to create parent directories in linux**
+~~~
+mkdir -pv foo/bar/baz
+~~~
+
+- **To see the processes that using more memory and more cpu**
+~~~
+top # we can use M to sort them with high memory
+top # we can use C to sort them with high cpu
+~~~
+  
 ## My first project
 AWS monitoring code using shell scripting
 
