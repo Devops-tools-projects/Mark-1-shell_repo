@@ -36,6 +36,29 @@ vim 00-description.conf                        # 00 will make this file execte f
 systemctl daemon-reload                        # This will be used to reload the systemctl and update changes.
 ~~~
 
+# Firewall in linux
+
+in Linux firewalld is the package and service. we can communicate to firewalld using "firewall-cmd".
+
+***Zone***: in firewall, zones are logical groupings of network interfaces that define trust levels, security policies, and traffic flow rules between different parts of a network.
+Firewall zones allow you to assign different trust levels to different parts of your network, such as:
+
+- **Internal (trusted)**
+
+- **External (untrusted)**
+
+- **DMZ (Demilitarized Zone)**
+
+- **Public**
+
+- **Private**
+
+- **Guest**
+
+- **VPN**
+
+Each zone has specific rules about what kind of traffic is allowed to and from other zones.
+
 ## My first project
 AWS monitoring code using shell scripting
 
