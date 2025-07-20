@@ -35,6 +35,12 @@ mkdir /etc/systemd/system/sshd.service.d       #now we can create a new file in 
 vim 00-description.conf                        # 00 will make this file execte first and the value we are changing is description of the file.
 systemctl daemon-reload                        # This will be used to reload the systemctl and update changes.
 ~~~
+- **Note** : we can also perform authorization activity by only giving server access to user. who are part of a servtain group using this above method.
+~~~
+vim /etc/systemd/system/sshd.service.d/00-groups.conf    # we can create an update this file so that only certain groups has access to the server(authorization)
+
+AllowGroups admin                                        # this entry is added to only allow users from admin group
+~~~
 
 # Firewall in linux
 
