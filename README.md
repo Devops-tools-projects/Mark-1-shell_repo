@@ -22,6 +22,10 @@ top # we can use C to sort them with high cpu
 systemctl list-units
 ~~~
 
+- **To copy the files from one system to another, without the duplicates and only the difference**
+~~~
+rsync -av <file/directory> <server>
+~~~
 
 ## Systemd config changes
 Service configurations are stored in "/usr/lib..." path. but Changes to the files inside this path is forbidden so to perform any config chages we need to do them in "/etc/systemd/system/<unit>.d" .
@@ -35,6 +39,35 @@ mkdir /etc/systemd/system/sshd.service.d       #now we can create a new file in 
 vim 00-description.conf                        # 00 will make this file execte first and the value we are changing is description of the file.
 systemctl daemon-reload                        # This will be used to reload the systemctl and update changes.
 ~~~
+- **Note** : we can also perform authorization activity by only giving server access to user. who are part of a servtain group using this above method.
+~~~
+vim /etc/systemd/system/sshd.service.d/00-groups.conf    # we can create an update this file so that only certain groups has access to the server(authorization)
+
+AllowGroups admin                                        # this entry is added to only allow users from admin group
+~~~
+
+# Firewall in linux
+
+in Linux firewalld is the package and service. we can communicate to firewalld using "firewall-cmd".
+
+***Zone***: in firewall, zones are logical groupings of network interfaces that define trust levels, security policies, and traffic flow rules between different parts of a network.
+Firewall zones allow you to assign different trust levels to different parts of your network, such as:
+
+- **Internal (trusted)**
+
+- **External (untrusted)**
+
+- **DMZ (Demilitarized Zone)**
+
+- **Public**
+
+- **Private**
+
+- **Guest**
+
+- **VPN**
+
+Each zone has specific rules about what kind of traffic is allowed to and from other zones.
 
 ## My first project
 AWS monitoring code using shell scripting
