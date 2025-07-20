@@ -22,6 +22,10 @@ top # we can use C to sort them with high cpu
 systemctl list-units
 ~~~
 
+- **To copy the files from one system to another, without the duplicates and only the difference**
+~~~
+rsync -av <file/directory> <server>
+~~~
 
 ## Systemd config changes
 Service configurations are stored in "/usr/lib..." path. but Changes to the files inside this path is forbidden so to perform any config chages we need to do them in "/etc/systemd/system/<unit>.d" .
