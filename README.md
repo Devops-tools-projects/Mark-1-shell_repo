@@ -29,7 +29,8 @@ rsync -av <file/directory> <server>
 
 - **To troubleshoot the issues, we can use below command to monitor the system**
 ~~~
-journalctl -f
+journalctl -f       # To get live logs of the system.
+journalctl -r       # To get all the logs of system
 ~~~
 
 ## Systemd config changes
