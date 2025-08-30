@@ -135,3 +135,9 @@ A file name is of - then we cant view or open the file, we need to use fqdn for 
 ~~~
 cat ./-
 ~~~
+
+## Issues
+
+- if you are facing DNS resolve issue in ubuntu linux then we can check and restart the "systemd-resolved" service.
+
+        sudo systemctl restart systemd-resolved
