@@ -135,3 +135,14 @@ A file name is of - then we cant view or open the file, we need to use fqdn for 
 ~~~
 cat ./-
 ~~~
+
+## Nginx
+
+It is a high performace weebserver & reverse proxy. it is used to serve static websites, act as load balancer, cache & SSL Termination. it also used as a reverse proxy for backend apps.
+
+We define the code in a "/var/www/" Path. we need to add the path in "site-available/default" in a nginx config. so the root-path & index file need to be specific. Now we can create a soft link inside the "/sites-enable" path.
+## Issues
+
+- if you are facing DNS resolve issue in ubuntu linux then we can check and restart the "systemd-resolved" service.
+
+        sudo systemctl restart systemd-resolved
